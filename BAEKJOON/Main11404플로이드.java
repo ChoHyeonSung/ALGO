@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main11404플로이드 {
+public class Main11404�뵆濡쒖씠�뱶 {
 	static int n,m;
 	static int[][] ans;
 	public static void main(String[] args) throws Exception {
@@ -32,13 +32,13 @@ public class Main11404플로이드 {
 		print();
 	}
 	static void floyd() {
-		// 기준이 되는 거쳐가는 노드 K
+		// 湲곗��씠 �릺�뒗 嫄곗퀜媛��뒗 �끂�뱶 K
         for(int k = 1; k <= n; k++) {
-            // 출발하는 노드 i
+            // 異쒕컻�븯�뒗 �끂�뱶 i
             for(int i=1; i <= n; i++) {
-                // 도착하는 노드 j
+                // �룄李⑺븯�뒗 �끂�뱶 j
                 for(int j=1; j <= n; j++) {
-                    //i에서 k를 거쳤다가 k에서 j 까지 가는 거리와 i에서 j 까지 가는 거리를 비교해서 작은 값이 최소거리이다.
+                    //i�뿉�꽌 k瑜� 嫄곗낀�떎媛� k�뿉�꽌 j 源뚯� 媛��뒗 嫄곕━�� i�뿉�꽌 j 源뚯� 媛��뒗 嫄곕━瑜� 鍮꾧탳�빐�꽌 �옉�� 媛믪씠 理쒖냼嫄곕━�씠�떎.
                 	if(i!=j&&i!=k) ans[i][j] = Math.min(ans[i][k] + ans[k][j], ans[i][j]);
                 }
             }
